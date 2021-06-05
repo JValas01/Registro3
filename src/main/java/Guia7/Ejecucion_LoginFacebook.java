@@ -69,11 +69,11 @@ public class Ejecucion_LoginFacebook {
         password_check = teclado.nextLine();
         
         if(BCrypt.checkpw(password_check, registro.getPassword())){
-            System.out.println("La password es correcta");
+            System.out.println("La contraseña es correcta");
         }
         
         else {
-            System.out.println("La password es incorrecta");
+            System.out.println("La contraseña es incorrecta");
         }
         
     }
