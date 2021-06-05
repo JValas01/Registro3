@@ -3,28 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-        
 package Guia7;
 
 /**
  *
  * @author tanbo
  */
-public class Login {
+public class Login_Facebook {
     
    private String nombre;
    private String apellidos;
    private float edad;
-   private String departamento;
    private String email;
    private String id_usuario;
    private String password;
    
-   public Login(String nombre, String apellidos, float edad, String departamento, String email, String id_usuario, String password){
+   public Login_Facebook(String nombre, String apellidos, float edad, String email, String id_usuario, String password){
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
-        this.departamento = departamento;
         this.email = email;
         this.id_usuario = id_usuario;
         this.password = password;
@@ -53,15 +50,7 @@ public class Login {
     public void setEdad(float edad) {
         this.edad = edad;
     }
-    
-    public String getDepartamento() {
-        return departamento;
-    }
-   
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
-    }
-    
+        
     public String getEmail() {
         return email;
     }
@@ -85,5 +74,5 @@ public class Login {
     public void setPassword(String password) {
         this.password = password;
     }
-   
+    
 }

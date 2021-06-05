@@ -12,18 +12,16 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author tanbo
  */
-public class MainTestBcrypt {
+public class Ejecucion_LoginFacebook {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         
         String nombre;
         String apellidos;
         float edad;
-        String departamento;
         String email;
         String id_usuario;
         String password;
@@ -38,10 +36,7 @@ public class MainTestBcrypt {
         
         System.out.println("Ingrese la edad :");
         edad = Float.parseFloat(teclado.nextLine());
-        
-        System.out.println("Ingrese el departamento :");
-        departamento = teclado.nextLine();
-        
+                
         System.out.println("Ingrese el email :");
         email = teclado.nextLine();
         
@@ -56,14 +51,13 @@ public class MainTestBcrypt {
         
         pass_hash = encriptar(password);
         
-        Login registro;
-        registro = new Login(nombre, apellidos, edad, departamento, email, id_usuario, pass_hash);
+        Login_Facebook registro;
+        registro = new Login_Facebook(nombre, apellidos, edad, email, id_usuario, pass_hash);
         
         System.out.println("Los datos de registro son: ");
         System.out.println("Nombre: " + registro.getNombre());
         System.out.println("Apellidos: " + registro.getApellidos());
         System.out.println("Edad: " + registro.getEdad());
-        System.out.println("Departamento: " + registro.getDepartamento());
         System.out.println("Email: " + registro.getEmail());
         System.out.println("Id: " + registro.getId_usuario());
         System.out.println("Contraseña: " + registro.getPassword());
@@ -87,6 +81,8 @@ public class MainTestBcrypt {
     public static String encriptar(String pass){
             
             return BCrypt.hashpw(pass, BCrypt.gensalt());
-    }        
+        
+        }        
+    }
     
-}
+
